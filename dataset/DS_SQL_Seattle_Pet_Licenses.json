@@ -1,0 +1,46 @@
+{
+	"name": "DS_SQL_Seattle_Pet_Licenses",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AZURE_SQL_SPL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "License Issue Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "License Number",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Animal's Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Species",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Primary Breed",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Secondary Breed",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ZIP Code",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "SeattlePetLicenses"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
