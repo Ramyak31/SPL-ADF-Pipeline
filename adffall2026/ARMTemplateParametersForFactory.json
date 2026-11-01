@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adffall2026"
+		},
+		"LS_AZURE_SQL_SPL_password": {
+			"value": ""
+		},
+		"LS_AZURE_STORAGE_SPL_accountKey": {
+			"value": ""
+		},
+		"LS_AZURE_KEYVAULT_SPL_properties_typeProperties_baseUrl": {
+			"value": "https://kv-fall2026-spl-001.vault.azure.net/"
+		},
+		"LS_AZURE_SQL_SPL_properties_typeProperties_server": {
+			"value": "sql-fall2026-spl.database.windows.net"
+		},
+		"LS_AZURE_SQL_SPL_properties_typeProperties_database": {
+			"value": "sqldb_fall2026_spl"
+		},
+		"LS_AZURE_SQL_SPL_properties_typeProperties_userName": {
+			"value": "spladmin"
+		},
+		"LS_AZURE_STORAGE_SPL_properties_typeProperties_url": {
+			"value": "https://splstorage2026.dfs.core.windows.net/"
+		}
+	}
+}
