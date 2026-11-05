@@ -47,8 +47,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "License Issue Date",
-									"type": "String",
+									"name": "LicenseIssueDate",
 									"physicalType": "UTF8"
 								}
 							},
@@ -59,8 +58,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "License Number",
-									"type": "String",
+									"name": "LicenseNumber",
 									"physicalType": "UTF8"
 								}
 							},
@@ -71,8 +69,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Animal's Name",
-									"type": "String",
+									"name": "AnimalsName",
 									"physicalType": "UTF8"
 								}
 							},
@@ -95,8 +92,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Primary Breed",
-									"type": "String",
+									"name": "PrimaryBreed",
 									"physicalType": "UTF8"
 								}
 							},
@@ -107,8 +103,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Secondary Breed",
-									"type": "String",
+									"name": "SecondaryBreed",
 									"physicalType": "UTF8"
 								}
 							},
@@ -119,8 +114,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "ZIP Code",
-									"type": "String",
+									"name": "ZIPCode",
 									"physicalType": "UTF8"
 								}
 							}
