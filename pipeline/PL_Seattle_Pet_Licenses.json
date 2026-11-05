@@ -131,7 +131,12 @@
 				"inputs": [
 					{
 						"referenceName": "DS_Seattle_Pet_Licenses",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"containerName": "source-files",
+							"folderName": "/",
+							"fileName": "Seattle_Pet_Licenses_20261015.csv"
+						}
 					}
 				],
 				"outputs": [
