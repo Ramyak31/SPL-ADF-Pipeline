@@ -1,0 +1,28 @@
+{
+	"name": "source_to_parquet_pl",
+	"properties": {
+		"parameters": {
+			"sourceContainer": {
+				"type": "string",
+				"defaultValue": "source-files"
+			},
+			"sourceFolder": {
+				"type": "string"
+			},
+			"sourceFile": {
+				"type": "string"
+			},
+			"targetContainer": {
+				"type": "string",
+				"defaultValue": "output-files"
+			},
+			"targetFolder": {
+				"type": "string"
+			},
+			"targetFile": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}
