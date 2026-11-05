@@ -1,6 +1,179 @@
 {
 	"name": "source_to_parquet_pl",
 	"properties": {
+		"activities": [
+			{
+				"name": "DS_Seattle_Pet_Licenses",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings",
+							"copyBehavior": "FlattenHierarchy"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "License Issue Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "License Issue Date",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "License Number",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "License Number",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Animal's Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Animal's Name",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Species",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Species",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Primary Breed",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Primary Breed",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Secondary Breed",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Secondary Breed",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "ZIP Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ZIP Code",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_Seattle_Pet_Licenses",
+						"type": "DatasetReference",
+						"parameters": {
+							"containerName": {
+								"value": "@pipeline().parameters.sourceContainer",
+								"type": "Expression"
+							},
+							"folderName": {
+								"value": "@pipeline().parameters.sourceFolder",
+								"type": "Expression"
+							},
+							"fileName": {
+								"value": "@pipeline().parameters.sourceFile",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_Seattle_Pet_Licenses_Parquet",
+						"type": "DatasetReference",
+						"parameters": {
+							"containerName": {
+								"value": "@pipeline().parameters.targetContainer",
+								"type": "Expression"
+							},
+							"folderName": {
+								"value": "@pipeline().parameters.targetFolder",
+								"type": "Expression"
+							},
+							"fileName": {
+								"value": "@pipeline().parameters.targetFile",
+								"type": "Expression"
+							}
+						}
+					}
+				]
+			}
+		],
 		"parameters": {
 			"sourceContainer": {
 				"type": "string",
