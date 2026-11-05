@@ -1,0 +1,16 @@
+{
+	"name": "spl_master_pl",
+	"properties": {
+		"parameters": {
+			"files_list": {
+				"type": "array",
+				"defaultValue": [
+					"Seattle_Pet_Licenses_20260915 (1).csv",
+					"Seattle_Pet_Licenses_20261001.csv",
+					"Seattle_Pet_Licenses_20261015.csv"
+				]
+			}
+		},
+		"annotations": []
+	}
+}
