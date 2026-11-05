@@ -12,6 +12,7 @@
 						"value": "@pipeline().parameters.files_list",
 						"type": "Expression"
 					},
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "Execute Pipeline1",
@@ -33,7 +34,7 @@
 										"type": "Expression"
 									},
 									"targetFile": {
-										"value": "@item()",
+										"value": "@concat(replace(item(),'.csv',''),'.parquet')",
 										"type": "Expression"
 									}
 								}
